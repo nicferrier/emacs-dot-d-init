@@ -40,6 +40,7 @@
     (kbd "C-M-#") 'shell-switcher-new-shell)
 
   (setenv "GIT_PAGER" "cat")
+  (setenv "PAGER" "cat")
 
   ;; Maybe this needs to go in JS mode hook
   (modify-syntax-entry ?` "\"" js-mode-syntax-table)
