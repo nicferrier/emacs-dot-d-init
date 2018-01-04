@@ -41,6 +41,9 @@
 
   (setenv "GIT_PAGER" "cat")
 
+  ;; Maybe this needs to go in JS mode hook
+  (modify-syntax-entry ?` "\"" js-mode-syntax-table)
+
   (add-hook 'after-init-hook 'frame-font-keychord-init))
 
 ;; Add the hook
@@ -122,6 +125,7 @@ Argument REPO-NAME the name of the repository to add."
  '(emacs-lisp-mode-hook
    (quote
     (eldoc-mode checkdoc-minor-mode paredit-mode show-paren-mode)))
+ '(indent-tabs-mode nil)
  '(menu-bar-mode nil)
  '(tool-bar-mode nil)
  '(truncate-lines t))
